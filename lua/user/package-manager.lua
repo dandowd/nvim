@@ -22,6 +22,16 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
 	"jose-elias-alvarez/null-ls.nvim",
 	"williamboman/mason.nvim",
+	{
+		"nvim-neotest/neotest",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"antoinemadec/FixCursorHold.nvim",
+			"nvim-neotest/neotest-plenary",
+			"haydenmeade/neotest-jest",
+		},
+	},
 	"nvim-tree/nvim-web-devicons",
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.1" },
 	"nvim-lualine/lualine.nvim",
@@ -83,3 +93,10 @@ lsp.setup()
 
 require("telescope").load_extension("file_browser")
 require("nvim-autopairs").setup()
+
+require("neotest").setup({
+	adapters = {
+		require("neotest-plenary"),
+		require("neotest-jest"),
+	},
+})
