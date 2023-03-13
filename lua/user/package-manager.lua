@@ -22,9 +22,11 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
 	"jose-elias-alvarez/null-ls.nvim",
 	"williamboman/mason.nvim",
+	"nvim-tree/nvim-web-devicons",
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.1" },
 	"nvim-lualine/lualine.nvim",
 	"nvim-telescope/telescope-file-browser.nvim",
+	"windwp/nvim-autopairs",
 	{ "rose-pine/neovim", as = "rose-pine" },
 	{
 		"VonHeikemen/lsp-zero.nvim",
@@ -79,3 +81,4 @@ lsp.nvim_workspace()
 lsp.setup()
 
 require("telescope").load_extension("file_browser")
+require("nvim-autopairs").setup()
