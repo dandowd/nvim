@@ -21,6 +21,7 @@ require("lazy").setup({
 	"neovim/nvim-lspconfig",
 	"williamboman/mason-lspconfig.nvim",
 	"jose-elias-alvarez/null-ls.nvim",
+	"github/copilot.vim",
 	"williamboman/mason.nvim",
 	{
 		"nvim-neotest/neotest",
