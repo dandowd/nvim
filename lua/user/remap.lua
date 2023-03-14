@@ -54,4 +54,4 @@ vim.keymap.set("n", "<leader>jn", "<cmd>lua require('neotest').run.run()<CR>")
 vim.keymap.set("n", "<leader>jf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>")
 
 -- Trouble
-vim.keymap.set("n", "<leader>x", "<cmd>Trouble<CR>")
+vim.keymap.set("n", "<leader>x", "<cmd>TroubleToggle<CR>")
