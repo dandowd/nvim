@@ -24,6 +24,7 @@ require("lazy").setup({
 	"github/copilot.vim",
 	"Hoffs/omnisharp-extended-lsp.nvim",
 	"williamboman/mason.nvim",
+	"mfussenegger/nvim-dap",
 	{
 		"nvim-neotest/neotest",
 		dependencies = {
