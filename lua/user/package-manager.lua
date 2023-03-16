@@ -25,6 +25,7 @@ require("lazy").setup({
 	"Hoffs/omnisharp-extended-lsp.nvim",
 	"williamboman/mason.nvim",
 	"mfussenegger/nvim-dap",
+	"rcarriga/nvim-dap-ui",
 	{
 		"nvim-neotest/neotest",
 		dependencies = {
@@ -110,4 +111,14 @@ require("neotest").setup({
 		require("neotest-jest"),
 		require("neotest-dotnet"),
 	},
+	output = {
+		enable = false,
+		open_on_run = false,
+	},
+	quickfix = {
+		enable = false,
+		open = false,
+	},
 })
+
+require("dapui").setup()
