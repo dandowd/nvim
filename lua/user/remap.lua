@@ -53,6 +53,14 @@ end)
 vim.keymap.set("n", "<leader>jn", "<cmd>lua require('neotest').run.run()<CR>")
 vim.keymap.set("n", "<leader>jf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>")
 vim.keymap.set("n", "<leader>jo", "<cmd>lua require('neotest').output.open()<CR>")
+vim.keymap.set("n", "<leader>jd", "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>")
+
+-- DAP
+vim.keymap.set("n", "<leader>db", "<cmd>lua require('dap').toggle_breakpoint()<CR>")
+vim.keymap.set("n", "<leader>dc", "<cmd>lua require('dap').continue()<CR>")
+vim.keymap.set("n", "<leader>di", "<cmd>lua require('dap').step_into()<CR>")
+vim.keymap.set("n", "<leader>do", "<cmd>lua require('dap').step_over()<CR>")
+vim.keymap.set("n", "<leader>du", "<cmd>lua require('dapui').toggle()<CR>")
 
 -- Trouble
 vim.keymap.set("n", "<leader>x", "<cmd>TroubleToggle<CR>")
