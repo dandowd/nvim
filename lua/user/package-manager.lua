@@ -32,6 +32,7 @@ require("lazy").setup({
 			"antoinemadec/FixCursorHold.nvim",
 			"nvim-neotest/neotest-plenary",
 			"haydenmeade/neotest-jest",
+			"Issafalcon/neotest-dotnet",
 		},
 	},
 	"nvim-tree/nvim-web-devicons",
@@ -106,5 +107,6 @@ require("neotest").setup({
 	adapters = {
 		require("neotest-plenary"),
 		require("neotest-jest"),
+		require("neotest-dotnet"),
 	},
 })
