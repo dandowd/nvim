@@ -57,4 +57,5 @@ vim.keymap.set("n", "<leader>jf", "<cmd>lua require('neotest').run.run(vim.fn.ex
 vim.keymap.set("n", "<leader>x", "<cmd>TroubleToggle<CR>")
 
 vim.g.copilot_no_tab_map = true
-vim.keymap.set("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
