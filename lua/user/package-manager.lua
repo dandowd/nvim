@@ -22,6 +22,7 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
 	"jose-elias-alvarez/null-ls.nvim",
 	"github/copilot.vim",
+	"Hoffs/omnisharp-extended-lsp.nvim",
 	"williamboman/mason.nvim",
 	{
 		"nvim-neotest/neotest",
@@ -85,6 +86,12 @@ local lsp = require("lsp-zero").preset({
 	set_lsp_keymaps = true,
 	manage_nvim_cmp = true,
 	suggest_lsp_servers = false,
+})
+
+lsp.configure("omnisharp", {
+	handlers = {
+		["textDocument/definition"] = require("omnisharp_extended").handler,
+	},
 })
 
 -- (Optional) Configure lua language server for neovim
