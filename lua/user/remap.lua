@@ -62,6 +62,12 @@ vim.keymap.set("n", "<leader>di", "<cmd>lua require('dap').step_into()<CR>")
 vim.keymap.set("n", "<leader>do", "<cmd>lua require('dap').step_over()<CR>")
 vim.keymap.set("n", "<leader>du", "<cmd>lua require('dapui').toggle()<CR>")
 
+-- LSP
+vim.keymap.set("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+vim.keymap.set("n", "<leader>lr>", "<cmd>lua vim.lsp.buf.rename()<CR>")
+
+vim.keymap.set("n", "<leader>ld", "<cmd>lua vim.diagnostic.open_float()<CR>")
+
 -- Trouble
 vim.keymap.set("n", "<leader>x", "<cmd>TroubleToggle<CR>")
 

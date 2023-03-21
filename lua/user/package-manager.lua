@@ -26,6 +26,7 @@ require("lazy").setup({
 	"williamboman/mason.nvim",
 	"mfussenegger/nvim-dap",
 	"rcarriga/nvim-dap-ui",
+	"rouge8/neotest-rust",
 	{
 		"nvim-neotest/neotest",
 		dependencies = {
@@ -110,6 +111,7 @@ require("neotest").setup({
 		require("neotest-plenary"),
 		require("neotest-jest"),
 		require("neotest-dotnet"),
+		require("neotest-rust"),
 	},
 	output = {
 		enable = false,
@@ -119,6 +121,8 @@ require("neotest").setup({
 		enable = false,
 		open = false,
 	},
+	output_panel = {
+		enable = false,
+		open = false,
+	},
 })
-
-require("dapui").setup()
