@@ -98,6 +98,14 @@ lsp.configure("omnisharp", {
 	},
 })
 
+lsp.setup_nvim_cmp({
+	sources = {
+		{ name = "nvim_lsp" },
+		{ name = "path" },
+		{ name = "buffer", keyword_length = 3 },
+	},
+})
+
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
