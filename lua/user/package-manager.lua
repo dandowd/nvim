@@ -142,5 +142,7 @@ require("bufferline").setup({
 		indicator = {
 			style = "underline",
 		},
+		separator_style = "padded_slant",
+		sort_by = "directory",
 	},
 })

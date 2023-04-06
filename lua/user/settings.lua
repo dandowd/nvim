@@ -1,5 +1,7 @@
 vim.cmd([[ colorscheme rose-pine ]])
 
+vim.cmd([[ set splitright ]])
+
 vim.o.signcolumn = "yes"
 
 vim.o.number = true
