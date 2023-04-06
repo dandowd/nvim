@@ -7,15 +7,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-
-vim.keymap.set("n", "<leader>vwm", function()
-	require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-	require("vim-with-me").StopVimWithMe()
-end)
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -42,7 +33,7 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/the
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 
 vim.keymap.set("n", "<leader>e", "<cmd>Explore<CR>")
-vim.keymap.set("n", "<leader>b", "<cmd>Telescope file_browser<CR>")
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser<CR>")
 vim.keymap.set("n", "<leader>wd", "<cmd>cd %:h<CR>")
 
 vim.keymap.set("n", "<leader><leader>", function()
@@ -72,5 +63,10 @@ vim.keymap.set("n", "<leader>ld", "<cmd>lua vim.diagnostic.open_float()<CR>")
 vim.keymap.set("n", "<leader>x", "<cmd>TroubleToggle<CR>")
 
 vim.g.copilot_no_tab_map = true
+
+-- Bufferline
+vim.keymap.set("n", "gb", "<cmd>BufferLinePick<CR>")
+
+vim.keymap.set("n", "<leader>bc", "<cmd>bde<CR>")
 
 vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

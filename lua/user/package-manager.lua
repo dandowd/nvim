@@ -25,6 +25,7 @@ require("lazy").setup({
 	"Hoffs/omnisharp-extended-lsp.nvim",
 	"williamboman/mason.nvim",
 	"mfussenegger/nvim-dap",
+	{ "akinsho/bufferline.nvim", tag = "v3.6.0", dependencies = "nvim-tree/nvim-web-devicons" },
 	"rcarriga/nvim-dap-ui",
 	"rouge8/neotest-rust",
 	{
@@ -132,5 +133,14 @@ require("neotest").setup({
 	output_panel = {
 		enable = false,
 		open = false,
+	},
+})
+
+require("bufferline").setup({
+	options = {
+		diagnostics = "nvim_lsp",
+		indicator = {
+			style = "underline",
+		},
 	},
 })
