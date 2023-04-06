@@ -36,10 +36,6 @@ vim.keymap.set("n", "<leader>e", "<cmd>Explore<CR>")
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser<CR>")
 vim.keymap.set("n", "<leader>wd", "<cmd>cd %:h<CR>")
 
-vim.keymap.set("n", "<leader><leader>", function()
-	vim.cmd("so")
-end)
-
 -- NeoTest
 vim.keymap.set("n", "<leader>jn", "<cmd>lua require('neotest').run.run()<CR>")
 vim.keymap.set("n", "<leader>jf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>")
