@@ -61,6 +61,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>TroubleToggle<CR>")
 vim.g.copilot_no_tab_map = true
 
 -- Bufferline
+vim.keymap.set("n", "<S-L>", "<cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<S-H>", "<cmd>BufferLineCyclePrev<CR>")
 vim.keymap.set("n", "gb", "<cmd>BufferLinePick<CR>")
 
 vim.keymap.set("n", "<leader>bc", "<cmd>bde<CR>")
