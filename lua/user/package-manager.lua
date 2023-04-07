@@ -103,7 +103,7 @@ lsp.setup_nvim_cmp({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "path" },
-		{ name = "buffer", keyword_length = 3 },
+		{ name = "buffer", keyword_length = 5 },
 	},
 })
 
