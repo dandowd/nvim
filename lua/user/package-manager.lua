@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
+	"nmac427/guess-indent.nvim",
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	"folke/trouble.nvim",
 	"folke/neodev.nvim",
@@ -27,6 +28,7 @@ require("lazy").setup({
 	"mfussenegger/nvim-dap",
 	{ "akinsho/bufferline.nvim", tag = "v3.6.0", dependencies = "nvim-tree/nvim-web-devicons" },
 	"rcarriga/nvim-dap-ui",
+	"nvim-neotest/neotest-go",
 	"rouge8/neotest-rust",
 	{
 		"nvim-neotest/neotest",
@@ -121,6 +123,7 @@ require("neotest").setup({
 		require("neotest-jest"),
 		require("neotest-dotnet"),
 		require("neotest-rust"),
+		require("neotest-go"),
 	},
 	output = {
 		enable = false,
@@ -146,3 +149,5 @@ require("bufferline").setup({
 		sort_by = "directory",
 	},
 })
+
+require("guess-indent").setup({})
