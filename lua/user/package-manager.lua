@@ -15,6 +15,13 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
 	"nmac427/guess-indent.nvim",
+	{
+		"microsoft/vscode-js-debug",
+		dependencies = "mxsdev/nvim-dap-vscode-js",
+		opt = true,
+		build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+	},
+
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	"folke/trouble.nvim",
 	"folke/neodev.nvim",
