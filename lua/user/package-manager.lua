@@ -21,7 +21,7 @@ require("lazy").setup({
 		opt = true,
 		build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
 	},
-
+	{ "b0o/schemastore.nvim" },
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	"folke/trouble.nvim",
 	"folke/neodev.nvim",
@@ -79,22 +79,6 @@ require("lazy").setup({
 -- This must come before lsp config
 require("neoconf").setup({})
 
-require("mason").setup()
-require("mason-lspconfig").setup()
-
-require("mason-lspconfig").setup_handlers({
-	function(server_name) -- default handler (optional)
-		require("lspconfig")[server_name].setup({
-			capabilities = require("cmp_nvim_lsp").default_capabilities(),
-		})
-	end,
-})
-
-require("lualine").setup()
-require("rose-pine").setup({
-	disable_background = true,
-})
-require("trouble").setup()
 local lsp = require("lsp-zero").preset({
 	name = "minimal",
 	set_lsp_keymaps = true,
@@ -108,11 +92,20 @@ lsp.configure("omnisharp", {
 	},
 })
 
+require("luasnip.loaders.from_vscode").lazy_load()
+
 lsp.setup_nvim_cmp({
+	snippet = {
+		-- REQUIRED - you must specify a snippet engine
+		expand = function(args)
+			require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+		end,
+	},
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "path" },
 		{ name = "buffer", keyword_length = 5 },
+		{ name = "luasnip" },
 	},
 })
 
@@ -120,6 +113,35 @@ lsp.setup_nvim_cmp({
 lsp.nvim_workspace()
 
 lsp.setup()
+
+require("mason").setup()
+require("mason-lspconfig").setup()
+
+require("mason-lspconfig").setup_handlers({
+	function(server_name) -- default handler (optional)
+		require("lspconfig")[server_name].setup({
+			capabilities = require("cmp_nvim_lsp").default_capabilities(),
+		})
+	end,
+})
+
+local json_capabilities = vim.lsp.protocol.make_client_capabilities()
+json_capabilities.textDocument.completion.completionItem.snippetSupport = true
+require("lspconfig").jsonls.setup({
+	capabilities = json_capabilities,
+	settings = {
+		json = {
+			schemas = require("schemastore").json.schemas(),
+			validate = { enable = true },
+		},
+	},
+})
+
+require("lualine").setup()
+require("rose-pine").setup({
+	disable_background = true,
+})
+require("trouble").setup()
 
 require("telescope").load_extension("file_browser")
 require("nvim-autopairs").setup()
