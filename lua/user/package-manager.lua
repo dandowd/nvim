@@ -112,8 +112,6 @@ lsp.setup_nvim_cmp({
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
-lsp.setup()
-
 require("mason").setup()
 require("mason-lspconfig").setup()
 
@@ -136,6 +134,8 @@ require("lspconfig").jsonls.setup({
 		},
 	},
 })
+
+lsp.setup()
 
 require("lualine").setup()
 require("rose-pine").setup({
