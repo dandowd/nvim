@@ -1,7 +1,0 @@
-require("user/package-manager")
-require("user/null-ls")
-require("user/treesitter-config")
-require("user/settings")
-require("user/remap")
-require("user/telescope-config")
-require("user/dap-config")

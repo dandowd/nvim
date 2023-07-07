@@ -146,27 +146,6 @@ require("trouble").setup()
 require("telescope").load_extension("file_browser")
 require("nvim-autopairs").setup()
 
-require("neotest").setup({
-	adapters = {
-		require("neotest-plenary"),
-		require("neotest-jest"),
-		require("neotest-dotnet"),
-		require("neotest-rust"),
-		require("neotest-go"),
-	},
-	output = {
-		enable = false,
-		open_on_run = false,
-	},
-	quickfix = {
-		enable = false,
-		open = false,
-	},
-	output_panel = {
-		enable = false,
-		open = false,
-	},
-})
 
 require("bufferline").setup({
 	options = {
