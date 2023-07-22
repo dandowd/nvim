@@ -12,16 +12,15 @@ lspconfig.tsserver.setup {
 lspconfig.eslint.setup {
     on_attach = function(client, bufnr)
             autocmd('BufWritePre', {
-                group = 'OnSave',
                 command = 'EslintFixAll',
             })
     end
 }
 
-augroup('OnSave', { clear = true })
 autocmd('BufWritePre', {
-        group = 'OnSave',
+        pattern = "*",
         callback = function()
-           vim.lsp.buf.format() 
+           vim.cmd [[ silent exec '!./node_modules/.bin/prettier --write %' ]]
+           vim.cmd [[ edit! ]]
         end,
 })
