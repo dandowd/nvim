@@ -1,5 +1,4 @@
 require("common/package-manager")
-require("common/null-ls")
 require("common/treesitter-config")
 require("common/settings")
 require("common/remap")

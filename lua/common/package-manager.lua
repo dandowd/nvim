@@ -28,7 +28,6 @@ require("lazy").setup({
 	"nvim-treesitter/nvim-treesitter",
 	"neovim/nvim-lspconfig",
 	"williamboman/mason-lspconfig.nvim",
-	"jose-elias-alvarez/null-ls.nvim",
 	"github/copilot.vim",
 	"Hoffs/omnisharp-extended-lsp.nvim",
 	"williamboman/mason.nvim",
