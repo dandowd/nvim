@@ -17,10 +17,10 @@ lspconfig.eslint.setup {
     end
 }
 
-autocmd('BufWritePre', {
-        pattern = "*",
-        callback = function()
-           vim.cmd [[ silent exec '!./node_modules/.bin/prettier --write %' ]]
-           vim.cmd [[ edit! ]]
-        end,
-})
+-- autocmd('BufWritePre', {
+--         pattern = "*",
+--         callback = function()
+--            vim.cmd [[ silent exec '!./node_modules/.bin/prettier --write %' ]]
+--            vim.cmd [[ edit! ]]
+--         end,
+-- })
