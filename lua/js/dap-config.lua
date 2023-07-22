@@ -30,20 +30,3 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 		},
 	}
 end
-
-dap.configurations.typescript = {
-	{
-		type = "pwa-node",
-		request = "launch",
-		name = "Launch file",
-		runtimeExecutable = "deno",
-		runtimeArgs = {
-			"run",
-			"--inspect-wait",
-			"--allow-all",
-		},
-		program = "${file}",
-		cwd = "${workspaceFolder}",
-		attachSimplePort = 9229,
-	},
-}
