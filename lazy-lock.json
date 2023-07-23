@@ -37,5 +37,6 @@
   "telescope-file-browser.nvim": { "branch": "master", "commit": "87dfaa9a9c251388cf4f01b9d4078c29d1fc8803" },
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
   "trouble.nvim": { "branch": "main", "commit": "2af0dd9767526410c88c628f1cbfcb6cf22dd683" },
-  "vscode-js-debug": { "branch": "main", "commit": "8fa24a71b84043a3c7065e4c64e1a9541ec518b2" }
+  "vscode-js-debug": { "branch": "main", "commit": "8fa24a71b84043a3c7065e4c64e1a9541ec518b2" },
+  "vscode.nvim": { "branch": "main", "commit": "05973862f95f85dd0564338a03baf61b56e1823f" }
 }
