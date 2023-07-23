@@ -18,10 +18,10 @@ lspconfig.eslint.setup {
 }
 
 autocmd('BufWritePost', {
-        pattern = "*",
+        pattern = "*.js, *.ts, *.jsx, *.tsx, *.html, *.css, *.scss, *.json, *.md",
         callback = function()
            -- The following command assumes that CWD is the root of the project. Which should be set by project_nvim
-           vim.cmd [[ silent exec '!./node_modules/.bin/prettier --write %' ]]
+           vim.cmd [[ silent exec '!npx prettier --write %' ]]
            vim.cmd [[ edit! ]]
         end,
 })
