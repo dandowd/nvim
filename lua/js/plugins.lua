@@ -1,6 +1,3 @@
-local augroup = vim.api.nvim_create_augroup
-local autocmd = vim.api.nvim_create_autocmd
-
 local lspconfig = require('lspconfig')
 
 lspconfig.tsserver.setup {
@@ -17,11 +14,7 @@ lspconfig.eslint.setup {
     end
 }
 
-autocmd('BufWritePost', {
-        pattern = "*.js, *.ts, *.jsx, *.tsx, *.html, *.css, *.scss, *.json, *.md",
-        callback = function()
-           -- The following command assumes that CWD is the root of the project. Which should be set by project_nvim
-           vim.cmd [[ silent exec '!npx prettier --write %' ]]
-           vim.cmd [[ edit! ]]
-        end,
+vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+        pattern = "*.js,*.ts,*.jsx,*.tsx,*.html,*.css,*.scss,*.json,*.md,*.svelte",
+        command = "silent exec '!npx prettier --write %'",
 })
