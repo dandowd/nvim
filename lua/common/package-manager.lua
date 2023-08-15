@@ -21,6 +21,7 @@ require("lazy").setup({
 		opt = true,
 		build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
 	},
+	{ "https://git.sr.ht/~whynothugo/lsp_lines.nvim"},
 	{ "ahmedkhalf/project.nvim" },
 	{ "b0o/schemastore.nvim" },
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
@@ -78,6 +79,7 @@ require("lazy").setup({
 
 require("project_nvim").setup({})
 require("telescope").load_extension("projects")
+require("lsp_lines").setup()
 
 -- This must come before lsp config
 require("neoconf").setup({})
