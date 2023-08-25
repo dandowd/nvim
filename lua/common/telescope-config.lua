@@ -5,6 +5,12 @@ vim.keymap.set("n", "<leader>ff", function() builtin.find_files({ hidden = true 
 vim.keymap.set("n", "<leader>fp", extensions.projects.projects, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<C-p>", builtin.git_files, {})
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fb",
+  ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+  { noremap = true }
+)
 vim.keymap.set("n", "<leader>ps", function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)

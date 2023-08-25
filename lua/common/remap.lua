@@ -33,7 +33,6 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/the
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 
 vim.keymap.set("n", "<leader>e", "<cmd>Explore<CR>")
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser<CR>")
 vim.keymap.set("n", "<leader>wd", "<cmd>cd %:h<CR>")
 
 -- NeoTest
