@@ -14,7 +14,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
+	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	"nmac427/guess-indent.nvim",
+	{
+		"goolord/alpha-nvim",
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+	},
 	{
 		"microsoft/vscode-js-debug",
 		dependencies = "mxsdev/nvim-dap-vscode-js",
