@@ -16,6 +16,7 @@ require("lazy").setup({
 	"nvim-lua/plenary.nvim",
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	"nmac427/guess-indent.nvim",
+	"sbdchd/neoformat",
 	{
 		"goolord/alpha-nvim",
     config = function ()

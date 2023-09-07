@@ -22,3 +22,5 @@ vim.cmd([[ colorscheme gruvbox ]])
 vim.cmd([[ set background=dark ]])
 
 vim.cmd([[ set splitright ]])
+
+vim.g.neoformat_try_node_exe = 1

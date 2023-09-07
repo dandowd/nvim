@@ -14,7 +14,7 @@ lspconfig.eslint.setup {
     end
 }
 
-vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-        pattern = "*.js,*.ts,*.jsx,*.tsx,*.html,*.css,*.scss,*.json,*.md,*.svelte",
-        command = "silent exec '!npx prettier --write %'",
-})
+--vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+--        pattern = "*.js,*.ts,*.jsx,*.tsx,*.html,*.css,*.scss,*.json,*.md,*.svelte",
+--        command = "silent exec '!npx prettier --write %'",
+--})
