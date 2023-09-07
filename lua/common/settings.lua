@@ -13,6 +13,7 @@ vim.o.termguicolors = true
 vim.o.updatetime = 50
 
 vim.o.autoindent = true
+vim.o.smartindent = true
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
