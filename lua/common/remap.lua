@@ -37,6 +37,7 @@ vim.keymap.set("n", "<leader>wd", "<cmd>cd %:h<CR>")
 
 -- NeoTest
 vim.keymap.set("n", "<leader>jn", "<cmd>lua require('neotest').run.run()<CR>")
+vim.keymap.set("n", "<leader>js", "<cmd>lua require('neotest').run.stop()<CR>")
 vim.keymap.set("n", "<leader>jf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>")
 vim.keymap.set("n", "<leader>jo", "<cmd>lua require('neotest').output.open()<CR>")
 vim.keymap.set("n", "<leader>jd", "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>")
