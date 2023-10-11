@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
+	"leoluz/nvim-dap-go",
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	"nmac427/guess-indent.nvim",
 	"sbdchd/neoformat",
