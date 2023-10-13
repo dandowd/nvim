@@ -59,7 +59,7 @@ require("lazy").setup({
 		},
 	},
 	"nvim-tree/nvim-web-devicons",
-	{ "nvim-telescope/telescope.nvim", tag = "0.1.1" },
+	{ "nvim-telescope/telescope.nvim" },
 	"nvim-lualine/lualine.nvim",
 	"nvim-telescope/telescope-file-browser.nvim",
 	"windwp/nvim-autopairs",
