@@ -35,6 +35,8 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 vim.keymap.set("n", "<leader>e", "<cmd>Explore<CR>")
 vim.keymap.set("n", "<leader>wd", "<cmd>cd %:h<CR>")
 
+vim.keymap.set("n", "<leader>nf", "<cmd>Neoformat<CR>")
+
 -- NeoTest
 vim.keymap.set("n", "<leader>jn", "<cmd>lua require('neotest').run.run()<CR>")
 vim.keymap.set("n", "<leader>js", "<cmd>lua require('neotest').run.stop()<CR>")
