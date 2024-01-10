@@ -81,7 +81,7 @@ require("lazy").setup({
 			{ "hrsh7th/cmp-nvim-lua" }, -- Optional
 
 			-- Snippets
-			{ "L3MON4D3/LuaSnip" }, -- Required
+			{ "L3MON4D3/LuaSnip", commit = "0df29db3543837f8b41597f2640397c5ec792b7b" }, -- Required
 		},
 	},
 })
