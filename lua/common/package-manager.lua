@@ -13,6 +13,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{ "David-Kunz/gen.nvim", opts = { model = "dolphin-mistral" } },
+	'nvim-telescope/telescope-ui-select.nvim',
 	"nvim-lua/plenary.nvim",
 	"leoluz/nvim-dap-go",
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
@@ -156,6 +158,7 @@ require("rose-pine").setup({
 require("trouble").setup()
 
 require("telescope").load_extension("file_browser")
+require("telescope").load_extension("ui-select")
 require("nvim-autopairs").setup()
 
 
